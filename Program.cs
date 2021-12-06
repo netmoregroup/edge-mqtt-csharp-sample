@@ -37,12 +37,14 @@ namespace mqtt_sample
         }
         static void Main(string[] args)
         {
-            var host = "mqttdev.dev.netmoregroup.com";
+            if( args.Length == 0 ) {
+                Console.WriteLine("You have to start with a valid host name as argument.");
+                return;
+            }
+            var host = args[0];
             var port = 8883;
-            //var host = "localhost";
-            //var port = 1883;
 
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Connecting to host {0}", host);
             var caCert = X509Certificate.CreateFromCertFile(@"./certs/ca.crt");
             var clientCert = new X509Certificate2(@"./certs/client.pfx");
             var parts = clientCert.Subject.Split(",");
