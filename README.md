@@ -1,4 +1,4 @@
-# edge-mqtt-csharp-sample
+# Edge Mqtt cSharp sample
 
 This is a simple sample on how to use certificates and the client mqtt api.
 
