@@ -5,7 +5,7 @@
     <RootNamespace>edge-mqtt-csharp-sample</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MQTTnet" Version="3.0.16"/>
-    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="3.0.16"/>
+    <PackageReference Include="MQTTnet" Version="3.1.2"/>
+    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="3.1.2"/>
   </ItemGroup>
 </Project>
