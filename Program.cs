@@ -45,8 +45,7 @@ namespace mqtt_sample
             var port = 8883;
 
             Console.WriteLine("Connecting to host {0}", host);
-            var caCert = X509Certificate.CreateFromCertFile(@"./certs/ca.crt");
-            var clientCert = new X509Certificate2(@"./certs/client.pfx");
+            var clientCert = new X509Certificate2(@"./certs/client.pfx");            
             var parts = clientCert.Subject.Split(",");
             var cn = (parts[0].Split("="))[1];
             Console.WriteLine("Common name: {0}", cn);
@@ -65,7 +64,7 @@ namespace mqtt_sample
 
                         Certificates = new List<X509Certificate>()
                         {
-                            clientCert, caCert
+                            clientCert, caCrt
                         },
                         CertificateValidationHandler = (certContext) => {
                             X509Chain chain = new X509Chain();
